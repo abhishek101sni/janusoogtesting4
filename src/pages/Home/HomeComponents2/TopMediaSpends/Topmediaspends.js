@@ -111,11 +111,7 @@ const titleAndArrowAllignment = {
 
 const Topmediaspends = () => {
   const [data, setData] = useState([]);
-  React.useEffect(() => {
-    getProducts();
-  }, []);
 
-  const { products } = useSelector((state) => state.OutdoorReducer);
   const navigate = useNavigate();
   const classes = useStyles();
 
@@ -352,7 +348,7 @@ const Topmediaspends = () => {
               // style={{ backgroundColor: "red" }}
             >
               {data &&
-                data.map((item, index) => (
+                data.filter((item) => item.status === "active").map((item, index) => (
                   <Box
                     sx={{
                       padding: {
@@ -530,7 +526,7 @@ const Topmediaspends = () => {
               // style={{ backgroundColor: "red" }}
             >
               {data &&
-                data.map((item, index) => (
+                data.filter((item) => item.status === "active").map((item, index) => (
                   <Box
                     sx={{
                       // display: "flex",
