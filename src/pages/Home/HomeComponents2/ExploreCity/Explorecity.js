@@ -107,14 +107,14 @@ const Imagetitle = {
   position: "absolute",
   zIndex: "1",
   right: {
-    xs:"60px",
-    sm:"60px",
+    xs:"50px",
+    sm:"50px",
     md:"30px",
     lg:"30px"
   },
   bottom: {
-    xs:"30px",
-    sm:"30px",
+    xs:"10px",
+    sm:"10px",
     md:"5px",
     lg:"5px"
   },
@@ -385,10 +385,10 @@ const Explorecity = () => {
                         component="img"
                         src={item.image}
                         sx={{
-                          width: "80%",
-                          height: "70%",
+                          width: "95%",
+                          height: "95%",
                           borderRadius: "10px",
-                          margin:"0px 0px 30px 0px"
+                          margin:"0px 0px 10px 0px"
                         }}
                       />
                       <Typography sx={Imagetitle}>{item.title}</Typography>

@@ -1,7 +1,10 @@
 import React from "react";
 
 // Image
-import { triumphsbgimg } from "../../../../DesignData/Images/Images";
+import {
+  triumphsbgimg,
+
+} from "../../../../DesignData/Images/Images";
 // MUI
 import { makeStyles } from "@mui/styles";
 import {
@@ -19,8 +22,6 @@ import "slick-carousel/slick/slick-theme.css";
 
 // json
 import { TriumphsData2 } from "../../../../assets/json/newDesign/TriumphsData2";
-import { SectionDescriptionForMobile, SectionMainTitle, SectionMainTitleForDesktop } from "../../../Styles/Styles";
-import { display } from "@mui/system";
 
 const useStyles = makeStyles(() => ({
   bgImage: {
@@ -39,8 +40,8 @@ const useStyles = makeStyles(() => ({
 
 const MarginBtwnTypo = {
   marginTop: {
-    xs: "0px",
-    sm: "0px",
+    xs: "10px",
+    sm: "10px",
     md: "0px",
     lg: "0px",
   },
@@ -124,7 +125,7 @@ const Description = {
   fontFamily: "Inter, sans-serif",
   display:{
     xs:"none",
-    sm:"none",
+    sm:'none',
     md:"block",
     lg:"block"
   }
@@ -194,21 +195,33 @@ const Triumphs2 = () => {
           <Box sx={MainMargins}>
             {/* Title */}
             <Box>
-            {/* DeskTop */}
-              <Typography sx={SectionMainTitleForDesktop}>TRIUMPHS</Typography>
-              {/* Mobile */}
-              <Typography sx={SectionMainTitle}>TRIUMPHS</Typography>
+              <Typography sx={MainTitle}>TRIUMPHS</Typography>
             </Box>
             {/* Description */}
             <Box sx={MarginBtwnTypo}>
-            {/* Desktop */}
               <Typography sx={Description}>
                 Showcasing the success stories of clients who've experienced our
-                creative <br />
+                creative <br/>
                 prowess, surpassing ordinary online marketing impact.
               </Typography>
-              {/* Mobile */}
-              <Typography sx={SectionDescriptionForMobile}>
+              <Typography sx={{
+                marginTop: "15px",
+                fontSize: "16px",
+                color: "#000",
+                lineHeight: "22px",
+                fontWeight: "500",
+                textAlign: "center",
+                padding: "0px 10px 0px 10px",
+                display: {
+                  md: "none",
+                  lg: "none",
+                },
+                fontFamily: "Inter, sans-serif",
+                display: {
+                  md: "none",
+                  lg: "none",
+                },
+              }}>
                 Showcasing the success stories of clients who've experienced our
                 creative prowess, surpassing ordinary online marketing impact.
               </Typography>
@@ -229,7 +242,7 @@ const Triumphs2 = () => {
                 >
                   <Slider {...settings}>
                     {TriumphsData2.map((item, index) => (
-                      <Box sx={{margin:"0px 20px"}}>
+                      <Box>
                         <Box
                           component="img"
                           key={index}
@@ -237,9 +250,9 @@ const Triumphs2 = () => {
                           sx={{
                             width: {
                               xs: "100%",
-                              sm: "100%",
-                              md: "100%",
-                              lg: "100%",
+                              sm: "200px",
+                              md: "200px",
+                              lg: "200px",
                             },
                             // height: {
                             //   xs: "100px",
@@ -255,8 +268,7 @@ const Triumphs2 = () => {
                               lg: "0px 0px 0px 0px",
                             },
                             filter: "grayscale(100%)",
-                            // border: "2px solid red",
-                            // backgroundColor:"red"
+                            border:"0px"
                           }}
                         />
                       </Box>
